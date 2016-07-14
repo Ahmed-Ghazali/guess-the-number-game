@@ -1,7 +1,7 @@
-package theGuessGame;
+
 import java.util.Scanner;
 
-public class theGuessGame {
+public class Guess_the_number {
 	public static void main(String[] args) {
 		
 		// get ready for the player to use the keyboard
@@ -17,6 +17,8 @@ public class theGuessGame {
 				int theNumber = (int)(Math.random()*100 + 1);
 				while ( guess != theNumber ) {
 					System.out.println("Guess a number between 1 and 100:");
+					if (guess==7)
+						System.out.println("Game Over. "+"You Lose." + " The correct number is " + theNumber + ".");
 					
 					// get the user's guess
 					guess = scan.nextInt();
